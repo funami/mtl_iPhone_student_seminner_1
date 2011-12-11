@@ -1,12 +1,45 @@
-ポイント
+セミナーにて解説予定の内容です。
 
+
+ストーリー
+----------
+リクルートWebサービスのWebAPIを使って、取得したJSONをもとに、一覧表示、詳細表示、Twitter連動ができるアプリを作ってみます。
+コードを解説しながら、実習を交えて、iOSの基本となるプログラミング方法を、つかんでもらえればと思います。
+既にプログラムの達人の方には、少し物足りない内容になっているかも知れませんが、物足りないところは、お好きに拡張してもらって、どんな拡張をしてみたのかを共有してくださ〜い。
+
+
+本ソース(https://github.com/funami/mtl_iPhone_student_seminner_1)は以下ポイントの1〜5の基本部分をカバーしています。
+XCode3.2.6,XCode4.2でのビルドを確認しています。
+iOS4.1以上での動作を確認しています。
+ポイント
+--------
 1.UITableView
+基本1.delegate,dataSorceの理解
+基本2.cellへのデータ投入
+応用1.カスタムセル
+応用2.セクション
 
 2.MapKit
+基本1.地図を緯度経度を指定して表示する
+基本2.ピンをたてる
 
 3.CoreLocation
+基本1.現在位置を取得する
+基本2.Mapアプリの経路検索と連携する
 
 4.Twitter連動
+基本1.UIWebViewを使って、Tweetする。
+基本2.iOS5のTwitter連携機能
 
-5.NSURLConnectionを使った非同期通信
+5.JSONのパース
+基本1.JSONKitライブラリを使う
+
+6.NSURLConnectionを使った非同期通信
+基本1.delegateによる、非同期データの受信。
+基本2.通信完了をUITableViewに通知する方法
+
+7.CoreData
+応用1.CoreDataにモデルを読み込む
+応用2.NSFetchedResultsControllerとUITableViewを使って、さまざまなソートを試す
+
 
