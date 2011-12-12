@@ -43,3 +43,21 @@ iOS4.1以上での動作を確認しています。
 応用2.NSFetchedResultsControllerとUITableViewを使って、さまざまなソートを試す
 
 
+ホットペッパーWebサービスの呼び出し例
+----------------------------------------------------
+APIを呼び出してデータを更新する
+APIのレスポンスで絞り込み条件をかえることができる
+
+例1.小エリアを指定 X005:銀座 - このパラメータをかえることで、絞り込み条件をかえることができる
+http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=b4fd444e7fd8d7b9&&small_area=X005
+
+	
+例2.全国のお店からフリーワード"焼き肉"で絞り込む
+http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=b4fd444e7fd8d7b9&keyword=%e7%84%bc%e3%81%8d%e8%82%89
+	
+例3.東京(SS10:large_area)のお店からジャンル(G001:居酒屋)で絞り込む
+http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=b4fd444e7fd8d7b9&large_area=Z011&genre=G001
+	
+例4.緯度経度(lat=35.670798&lon=139.760524)で絞り込む -- http://g.co/maps/d5f5e 付近
+http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=b4fd444e7fd8d7b9&lat=35.670798&lng=139.760524
+

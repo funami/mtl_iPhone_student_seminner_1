@@ -7,13 +7,33 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchViewController.h"
 
-@interface RootViewController : UITableViewController {
-	NSArray *_items;
+@interface RootViewController : UITableViewController<SearchViewControllerDelegate,UISearchDisplayDelegate > {
+	NSMutableArray *_items;
+    
+    //ネットからデータを取得するためのインスタンス変数
+    NSMutableData *_receivedData;
+    NSURLConnection *_connection;
+    NSString *_url;
+    int _start;
+    NSDictionary *_currentMiddleArea;
+    IBOutlet UILabel *_headerLabel;
 }
 
 #pragma mark -
 #pragma mark Model
 @property (nonatomic) int resultsAvailable;
-@property (nonatomic,retain,readonly) NSArray *items;
+@property (nonatomic,retain) NSArray *items;
+@property (nonatomic, retain) NSMutableArray *filtereditems;
+
+@property (nonatomic,retain) NSString *url;
+@property (nonatomic,retain) NSDictionary *currentMiddleArea;
+
+//WebAPIにたいして、データの取得を行う
+- (void)requestAPI;
+
+// 検索条件を設定、サンプルではエリアを指定できるようにした
+-(void)editSearchParam:(id)sender;
+
 @end
