@@ -10,6 +10,7 @@
 #import "DetailViewController.h"
 #import "JSONKit.h"
 #import "SVProgressHUD.h"
+#import "AboutViewController.h"
 
 // ↓こちらのAPI_KEYの値は、https://webservice.recruit.co.jp/register/index.htmlで新規登録したキーと差し替えてください
 #define API_KEY @"b4fd444e7fd8d7b9"
@@ -251,6 +252,14 @@
 }
 
 
+-(void) showAbout:(id)sender{
+    AboutViewController *aboutVC = [[AboutViewController alloc] init];
+    aboutVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:aboutVC animated:YES];
+    
+    [aboutVC release];
+    
+}
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -262,6 +271,11 @@
     UIBarButtonItem *searchEditButton = [[UIBarButtonItem alloc] initWithTitle:@"エリア" style:UIBarButtonItemStyleDone target:self action:@selector(editSearchParam:)];
     self.navigationItem.rightBarButtonItem = searchEditButton;
 	
+    
+    UIBarButtonItem *aboutButton = [[UIBarButtonItem alloc] initWithTitle:@"情報" style:UIBarButtonItemStyleBordered target:self action:@selector(showAbout:)];
+    self.navigationItem.leftBarButtonItem = aboutButton;
+    
+    
 	[self setTitle:@"MTLグルメ"];
     
     

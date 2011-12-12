@@ -23,6 +23,9 @@
 		631AD03D1496180900B474AB /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 631AD03A1496180900B474AB /* SVProgressHUD.bundle */; };
 		631AD03E1496180900B474AB /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 631AD03C1496180900B474AB /* SVProgressHUD.m */; };
 		631AD0471496259F00B474AB /* README in Resources */ = {isa = PBXBuildFile; fileRef = 631AD0461496259F00B474AB /* README */; };
+		631AD05C14963A7200B474AB /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631AD05A14963A7200B474AB /* AboutViewController.m */; };
+		631AD05D14963A7200B474AB /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631AD05B14963A7200B474AB /* AboutViewController.xib */; };
+		631AD05F14963AF600B474AB /* hotpepper-m.gif in Resources */ = {isa = PBXBuildFile; fileRef = 631AD05E14963AF500B474AB /* hotpepper-m.gif */; };
 		639389A91494342500777BE9 /* gourmet_Y005_pp.json in Resources */ = {isa = PBXBuildFile; fileRef = 639389A81494342500777BE9 /* gourmet_Y005_pp.json */; };
 		639389AD149434E400777BE9 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 639389AC149434E400777BE9 /* JSONKit.m */; };
 		63938A1F14943F4000777BE9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63938A1D14943F4000777BE9 /* DetailViewController.m */; };
@@ -61,6 +64,10 @@
 		631AD03B1496180900B474AB /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = External/SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
 		631AD03C1496180900B474AB /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = External/SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
 		631AD0461496259F00B474AB /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		631AD05914963A7200B474AB /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		631AD05A14963A7200B474AB /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		631AD05B14963A7200B474AB /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		631AD05E14963AF500B474AB /* hotpepper-m.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "hotpepper-m.gif"; sourceTree = "<group>"; };
 		639389A81494342500777BE9 /* gourmet_Y005_pp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = gourmet_Y005_pp.json; path = Mock/gourmet_Y005_pp.json; sourceTree = "<group>"; };
 		639389AB149434E400777BE9 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		639389AC149434E400777BE9 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
@@ -118,6 +125,9 @@
 				631AD0261495C77300B474AB /* SearchViewController.h */,
 				631AD0271495C77300B474AB /* SearchViewController.m */,
 				631AD0281495C77300B474AB /* SearchViewController.xib */,
+				631AD05914963A7200B474AB /* AboutViewController.h */,
+				631AD05A14963A7200B474AB /* AboutViewController.m */,
+				631AD05B14963A7200B474AB /* AboutViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -240,6 +250,7 @@
 		63938EFD1494F6FB00777BE9 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				631AD05E14963AF500B474AB /* hotpepper-m.gif */,
 				63938F041494F97100777BE9 /* Default.png */,
 				63938EFE1494F6FB00777BE9 /* icon.png */,
 			);
@@ -312,6 +323,8 @@
 				631AD0301495D44800B474AB /* middle_area.json in Resources */,
 				631AD03D1496180900B474AB /* SVProgressHUD.bundle in Resources */,
 				631AD0471496259F00B474AB /* README in Resources */,
+				631AD05D14963A7200B474AB /* AboutViewController.xib in Resources */,
+				631AD05F14963AF600B474AB /* hotpepper-m.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +346,7 @@
 				63938CBD1494770900777BE9 /* FNACustomAnnotation.m in Sources */,
 				631AD0291495C77300B474AB /* SearchViewController.m in Sources */,
 				631AD03E1496180900B474AB /* SVProgressHUD.m in Sources */,
+				631AD05C14963A7200B474AB /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
