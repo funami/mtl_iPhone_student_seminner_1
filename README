@@ -11,6 +11,9 @@
 本ソース(https://github.com/funami/mtl_iPhone_student_seminner_1)は以下ポイントの1〜5の基本部分をカバーしています。
 XCode3.2.6,XCode4.2でのビルドを確認しています。
 iOS4.1以上での動作を確認しています。
+
+1〜5はmasterで、6はadbanceブランチで実装しています。7は間に合わず、乞うご期待です。
+
 ポイント
 --------
 1.UITableView
