@@ -51,7 +51,7 @@
 		
 		if (rootObj){
             NSDictionary *results = [rootObj objectForKey:@"results"];
-            NSMutableArray *sectionCodes = [[NSMutableArray alloc] init];
+            NSMutableArray *sectionCodes = [[[NSMutableArray alloc] init] autorelease];
             
             
 			// オブジェクトに変換できたら,results要素を取り出す。

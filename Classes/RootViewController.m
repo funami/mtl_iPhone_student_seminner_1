@@ -47,6 +47,7 @@
     
 	// itemsを空にしておく
     self.title = [self.currentMiddleArea objectForKey:@"name"];
+    [_items release];
 	_items = [[NSMutableArray alloc] init];
     [self.tableView reloadData];
 	_start = 1;
