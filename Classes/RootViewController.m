@@ -418,14 +418,10 @@
         [_connection release];
         _connection = nil;
     }
-    [_currentMiddleArea release];
-    _currentMiddleArea = nil;
     [_url release];
     _url = nil;
     [_receivedData release];
     _receivedData = nil;
-	[_items release];
-	_items = nil;
     [_filtereditems release];
     _filtereditems = nil;
 }
