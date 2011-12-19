@@ -177,8 +177,6 @@
 	_mapView = nil;
 	[_photoImageView release];
 	_photoImageView = nil;
-	[_item release];
-	_item = nil;	
 }
 
 
