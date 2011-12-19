@@ -47,6 +47,7 @@
     
 	// itemsを空にしておく
     self.title = [self.currentMiddleArea objectForKey:@"name"];
+    [_items release];
 	_items = [[NSMutableArray alloc] init];
     [self.tableView reloadData];
 	_start = 1;
@@ -417,14 +418,10 @@
         [_connection release];
         _connection = nil;
     }
-    [_currentMiddleArea release];
-    _currentMiddleArea = nil;
     [_url release];
     _url = nil;
     [_receivedData release];
     _receivedData = nil;
-	[_items release];
-	_items = nil;
     [_filtereditems release];
     _filtereditems = nil;
 }
