@@ -83,15 +83,19 @@
 	 }
      */
     
-    MKPinAnnotationView *annotationView;
-    NSString* identifier = @"Pin";
-    annotationView = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
-    if(nil == annotationView) {
-        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+    static NSString* identifier = @"Pin";
+    if ([annotation isKindOfClass:[FNACustomAnnotation class]]) {
+        MKPinAnnotationView *annotationView = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+        if(nil == annotationView) {
+            annotationView = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier] autorelease];
+            annotationView.animatesDrop = YES;
+            annotationView.canShowCallout = NO;
+        } else {
+            annotationView.annotation = annotation;
+        }
+        return annotationView;
     }
-    annotationView.animatesDrop = YES;
-    annotationView.canShowCallout = NO;
-    return annotationView;
+    return nil;
 }
 	
 
@@ -126,7 +130,7 @@
 	MKCoordinateRegion cr = MKCoordinateRegionMake(co,span);
 	[_mapView setRegion:cr animated:YES];
 	
-	FNACustomAnnotation* annotation = [[FNACustomAnnotation alloc] initWithLocation:co];
+	FNACustomAnnotation* annotation = [[[FNACustomAnnotation alloc] initWithLocation:co] autorelease];
 	[_mapView removeAnnotations:_mapView.annotations];
 	[_mapView addAnnotation:annotation];
 	
@@ -173,8 +177,6 @@
 	_mapView = nil;
 	[_photoImageView release];
 	_photoImageView = nil;
-	[_item release];
-	_item = nil;	
 }
 
 
